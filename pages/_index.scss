@@ -283,8 +283,9 @@ $blue-color: #85f7ff;
 }
 // end hero_section
 
-// start about_programe
-.about_programe {
+// start about_programe, about_whatsapp
+.about_programe,
+.about_whatsapp {
   padding: 80px 0;
   background-color: #ebeef9;
 
@@ -394,7 +395,8 @@ $blue-color: #85f7ff;
 }
 
 @media (max-width: 768px) {
-  .about_programe {
+  .about_programe,
+  .about_whatsapp {
     padding: 30px 0 70px;
 
     .line {
@@ -470,4 +472,268 @@ $blue-color: #85f7ff;
     }
   }
 }
-// end about_programe
+// end about_programe, about_whatsapp
+
+// start about_whatsapp
+.about_whatsapp {
+  background-color: transparent;
+  padding: 100px 0;
+
+  .right {
+    justify-content: center;
+
+    .img_about {
+      text-align: center;
+      img {
+        width: 85%;
+        border-radius: 60px;
+        box-shadow: 0px 25px 50px 0px rgba(217, 217, 217, 0.36);
+      }
+    }
+
+    .img_person {
+      position: absolute;
+      bottom: -45px;
+      right: 0px;
+
+      img {
+        width: 75%;
+        position: relative;
+        z-index: 10;
+      }
+
+      .bg_person {
+        position: absolute;
+        bottom: 0;
+        left: 63%;
+        transform: translateX(-50%);
+        z-index: 5;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about_whatsapp {
+    padding: 40px 0;
+
+    .left {
+      .subtitle {
+        font-size: 17px;
+      }
+
+      .title {
+        font-size: 20px !important;
+        margin-bottom: 5px;
+      }
+    }
+
+    .right {
+      .img_about {
+        img {
+          width: 100%;
+          height: 360px;
+          border-radius: 40px;
+        }
+      }
+
+      .img_person {
+        display: none;
+      }
+    }
+  }
+}
+// end about_whatsapp
+
+// start pricing
+.pricing {
+  padding: 150px 0;
+
+  .subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #6c1eda;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .desc {
+    color: gray;
+    margin: auto;
+    text-align: center;
+  }
+
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+
+    .box {
+      background-color: #eff2fb;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+
+      &.active {
+        background-color: #6c1eda;
+        color: white;
+
+        .desc {
+          color: rgb(198, 198, 198);
+        }
+
+        .features {
+          .feature {
+            i {
+              color: white;
+            }
+          }
+        }
+
+        .btn_buy {
+          background-color: white;
+          color: #6c1eda !important;
+        }
+      }
+
+      .icon {
+        text-align: center;
+        margin-bottom: 25px;
+
+        img {
+          width: 80px;
+        }
+      }
+
+      .title {
+        font-size: 26px;
+      }
+
+      .desc {
+        font-size: 15px;
+        color: gray;
+        margin-bottom: 0;
+      }
+
+      .price {
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        margin: 20px 0;
+      }
+
+      .features {
+        text-align: center;
+        margin-bottom: 30px;
+
+        .feature {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          i {
+            color: #6c1eda;
+            font-size: 13px;
+          }
+
+          span {
+            font-size: 17px;
+          }
+        }
+      }
+
+      .btn_buy {
+        background-color: #6c1eda;
+        color: white !important;
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 35px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 30px 0;
+
+    .subtitle {
+      font-size: 15px;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+
+    .desc {
+      font-size: 13px;
+    }
+
+    .boxs {
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+
+      .box {
+        padding: 15px;
+
+        .icon {
+          margin-bottom: 8px;
+          img {
+            width: 60px;
+          }
+        }
+
+        .title {
+          font-size: 20px;
+        }
+
+        .desc {
+          font-size: 13px;
+        }
+
+        .price {
+          font-size: 26px;
+          margin: 10px 0;
+        }
+
+        .features {
+          margin-bottom: 15px;
+
+          .feature {
+            gap: 4px;
+            &:not(:last-child) {
+              margin-bottom: 3px;
+            }
+
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .btn_buy {
+          padding: 6px 35px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+// end pricing

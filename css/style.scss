@@ -1,6 +1,11 @@
 @use "../components/header";
 @use "../components/footer";
+@use "../components/secound_hero";
 @use "../pages/index";
+@use "../pages/contact";
+@use "../pages/marketing-program";
+@use "../pages/details-section";
+@use "../pages/operating-requirements";
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
@@ -11,7 +16,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body {
